@@ -2,22 +2,11 @@
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
+let packageName = "appcenter-sdk-apple"
+
 let package = Package(
-	name: "appcenter-sdk-apple",
-	platforms: [
-		.iOS(.v10),
-	],
-	products: [
-		.library(
-			name: "appcenter-sdk-apple",
-			targets: ["appcenter-sdk-apple"]),
-	],
-	targets: [
-		.target(
-			name: "appcenter-sdk-apple",
-			dependencies: []),
-		.testTarget(
-			name: "appcenter-sdk-apple",
-			dependencies: ["appcenter-sdk-apple"]),
-	]
+	name: packageName,
+	platforms: [ .iOS(.v10) ],
+	products: [ .library(name: packageName, targets: [packageName]) ],
+	targets: [ .target(name: packageName, dependencies: [])) ]
 )
